@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Campagnes</title>
+
+    <!-- Lien vers le fichier CSS externe -->
+    <link rel="stylesheet" type="text/css" href="../css/campaigns.css">
+</head>
+<body>
+
+    <header>
+        <h1>Mes Campagnes</h1>
+    </header>
+
+    <div id="container">
+
+        <p id="welcome-text">Bienvenue Rida ! Clique sur le bouton de ton choix pour commencer.</p>
+
+        <!-- Ajout de la div pour les boutons -->
+        <div id="buttons-container">
+            <button class="bouton" id="voirToutes">Voir Toutes les Campagnes</button>
+            <button class="bouton" id="voirUne">Voir Une Campagne</button>
+            <button class="bouton" id="creer">Créer une Campagne</button>
+            <button class="bouton" id="supprimer">Supprimer une Campagne</button>
+        </div>
+
+        <div id="resultat"></div>
+
+    </div>
+
+    <script src="js/afficherToutes.js"></script>
+    <script src="js/afficherUne.js"></script>
+    <script src="js/creer.js"></script>
+    <script src="js/supprimer.js"></script>
+
+    <script>
+        document.getElementById('voirToutes').addEventListener('click', afficherToutes);
+        document.getElementById('voirUne').addEventListener('click', afficherUne);
+        document.getElementById('creer').addEventListener('click', afficherCreer);
+        document.getElementById('supprimer').addEventListener('click', afficherSupprimer);
+
+        function afficherToutes() {
+            // Appel à la fonction dans le fichier afficherToutes.js
+        }
+
+        function afficherUne() {
+            // Appel à la fonction dans le fichier afficherUne.js
+        }
+
+        function afficherCreer() {
+            // Appel à la fonction dans le fichier creer.js
+        }
+
+        function afficherSupprimer() {
+            // Appel à la fonction dans le fichier supprimer.js
+        }
+    </script>
+
+</body>
+</html>

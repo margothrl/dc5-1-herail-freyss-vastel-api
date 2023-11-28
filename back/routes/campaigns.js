@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const campaignsCtrl = require('../controllers/product');
+const campaignsCtrl = require('../controllers/campaigns');
 
 // Acquérir toutes les campagnes
 router.get('/api/campaings', campaignsCtrl.getAllCampaigns)

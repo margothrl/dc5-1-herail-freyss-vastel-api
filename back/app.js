@@ -20,6 +20,6 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 
 app.use('/api/products', productRoutes);
-app.use('/api/products', campaignsRoutes);
+app.use('/api/campaigns', campaignsRoutes);
 
 module.exports = app;

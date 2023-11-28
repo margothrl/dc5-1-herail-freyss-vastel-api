@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Campagnes</title>
+    <link rel="stylesheet" href="campaigns.css">
+</head>
+<body>
+
+    <header>
+        <h1>Mes Campagnes</h1>
+    </header>
+
+    <button class="bouton" id="voirToutes">Voir Toutes les Campagnes</button>
+    <button class="bouton" id="voirUne">Voir Une Campagne</button>
+    <button class="bouton" id="creer">Créer une Campagne</button>
+    <button class="bouton" id="supprimer">Supprimer une Campagne</button>
+
+    <div id="resultat"></div>
+
+    <!-- Inclusion des fichiers JavaScript externes -->
+    <script src="afficherToutes.js"></script>
+    <script src="afficherUne.js"></script>
+    <script src="creer.js"></script>
+    <script src="supprimer.js"></script>
+
+    <script>
+        // Liaison des clics des boutons aux fonctions correspondantes
+        document.getElementById('voirToutes').addEventListener('click', afficherToutes);
+        document.getElementById('voirUne').addEventListener('click', afficherUne);
+        document.getElementById('creer').addEventListener('click', afficherCreer);
+        document.getElementById('supprimer').addEventListener('click', afficherSupprimer);
+
+        function afficherToutes() {
+            // Appel à la fonction dans le fichier afficherToutes.js
+        }
+
+        function afficherUne() {
+            // Appel à la fonction dans le fichier afficherUne.js
+        }
+
+        function afficherCreer() {
+            // Appel à la fonction dans le fichier creer.js
+        }
+
+        function afficherSupprimer() {
+            // Appel à la fonction dans le fichier supprimer.js
+        }
+    </script>
+
+</body>
+</html>

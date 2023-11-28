@@ -5,7 +5,13 @@ exports.getAllCampaigns = (req, res, next) => {
   campaigns.find().then(
     (campaigns) => {
       const mappedCampaigns = campaigns.map((campaigns) => {
-        campaigns.imageUrl = req.protocol + '://' + req.get('host') + '/images/' + campaigns.imageUrl;
+        id = campaigns.id;
+        name = campaigns.name;
+        description = campaigns.description
+        start_date = campaigns.start_date
+        end_date = campaigns.end_date
+        budget = campaigns.budget
+
         return campaigns;
       });
       res.status(200).json(mappedCampaigns);

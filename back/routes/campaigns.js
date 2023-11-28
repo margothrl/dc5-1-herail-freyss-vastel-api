@@ -10,5 +10,5 @@ router.get('/api/campaings/{id}', campaignsCtrl.getOnecampaigns)
 //Acquérir créer une campagne
 router.post('/api/campaings', campaignsCtrl.ordercampaigns)
 //Supprimer une campagne
-router.delete('/api/campaings/{id}', campaignsCtrl.DelCampaigns)
+//router.delete('/api/campaings/{id}', campaignsCtrl.DelCampaigns)
 module.exports = router;

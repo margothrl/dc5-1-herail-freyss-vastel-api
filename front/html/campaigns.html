@@ -22,14 +22,34 @@
         <div id="buttons-container">
             <button class="bouton" id="voirToutes">Voir Toutes les Campagnes</button>
             <button class="bouton" id="voirUne">Voir Une Campagne</button>
-            <button class="bouton" id="creer">Créer une Campagne</button>
+            <button class="bouton" id="creer" onclick="toggleCreateCampaignForm()">Créer une Campagne</button>
             <button class="bouton" id="supprimer">Supprimer une Campagne</button>
         </div>
+        
+        <!-- Ajout du formulaire -->
+<div id="create-campaign-form" style="display: none;">
+    <h2>Créer une Campagne</h2>
+    <form id="campaignForm">
+        <label for="name">Nom :</label>
+        <input type="text" id="name" name="name" required>
 
-        <div id="resultat"></div>
+        <label for="description">Description :</label>
+        <textarea id="description" name="description" required></textarea>
 
-    </div>
+        <label for="start_date">Date de début :</label>
+        <input type="date" id="start_date" name="start_date" required>
 
+        <label for="end_date">Date de fin :</label>
+        <input type="date" id="end_date" name="end_date" required>
+
+        <label for="budget">Budget :</label>
+        <input type="number" id="budget" name="budget" required>
+
+        <button type="button" onclick="saveCampaign()">Enregistrer</button>
+    </form>
+</div>
+
+    <script src="../js/campaigns.js"></script>
     <script src="js/afficherToutes.js"></script>
     <script src="js/afficherUne.js"></script>
     <script src="js/creer.js"></script>

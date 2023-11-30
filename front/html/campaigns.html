@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mes Campagnes</title>
-    <link rel="stylesheet" href="campaigns.css">
+
+    <!-- Lien vers le fichier CSS externe -->
+    <link rel="stylesheet" type="text/css" href="../css/campaigns.css">
 </head>
 <body>
 
@@ -12,21 +14,28 @@
         <h1>Mes Campagnes</h1>
     </header>
 
-    <button class="bouton" id="voirToutes">Voir Toutes les Campagnes</button>
-    <button class="bouton" id="voirUne">Voir Une Campagne</button>
-    <button class="bouton" id="creer">Créer une Campagne</button>
-    <button class="bouton" id="supprimer">Supprimer une Campagne</button>
+    <div id="container">
 
-    <div id="resultat"></div>
+        <p id="welcome-text">Bienvenue Rida ! Clique sur le bouton de ton choix pour commencer.</p>
 
-    <!-- Inclusion des fichiers JavaScript externes -->
-    <script src="afficherToutes.js"></script>
-    <script src="afficherUne.js"></script>
-    <script src="creer.js"></script>
-    <script src="supprimer.js"></script>
+        <!-- Ajout de la div pour les boutons -->
+        <div id="buttons-container">
+            <button class="bouton" id="voirToutes">Voir Toutes les Campagnes</button>
+            <button class="bouton" id="voirUne">Voir Une Campagne</button>
+            <button class="bouton" id="creer">Créer une Campagne</button>
+            <button class="bouton" id="supprimer">Supprimer une Campagne</button>
+        </div>
+
+        <div id="resultat"></div>
+
+    </div>
+
+    <script src="js/afficherToutes.js"></script>
+    <script src="js/afficherUne.js"></script>
+    <script src="js/creer.js"></script>
+    <script src="js/supprimer.js"></script>
 
     <script>
-        // Liaison des clics des boutons aux fonctions correspondantes
         document.getElementById('voirToutes').addEventListener('click', afficherToutes);
         document.getElementById('voirUne').addEventListener('click', afficherUne);
         document.getElementById('creer').addEventListener('click', afficherCreer);

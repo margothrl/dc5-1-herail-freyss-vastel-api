@@ -1,3 +1,4 @@
+
 // Fonction pour afficher/masquer le formulaire
 function toggleCreateCampaignForm() {
     var formSection = document.getElementById('create-campaign-form');

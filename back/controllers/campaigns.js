@@ -1,8 +1,7 @@
-const uuid = require('uuid/v1');
-const campaigns = require('../models/campaigns');
+const Campaign = require('../models/campaigns');
 
 exports.getAllCampaigns = (req, res, next) => {
-  campaigns.find().then(
+  Campaign.find().then(
     (campaigns) => {
       const mappedCampaigns = campaigns.map((campaigns) => {
         id = campaigns.id;

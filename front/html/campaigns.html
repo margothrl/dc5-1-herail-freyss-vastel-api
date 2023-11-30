@@ -20,7 +20,7 @@
 
         <!-- Ajout de la div pour les boutons -->
         <div id="buttons-container">
-            <button class="bouton" id="voirToutes">Voir Toutes les Campagnes</button>
+            <button class="bouton" id="voirToutes" onclick="afficherToutesCampagnes()">Voir Toutes les Campagnes</button>
             <button class="bouton" id="voirUne">Voir Une Campagne</button>
             <button class="bouton" id="creer" onclick="toggleCreateCampaignForm()">Créer une Campagne</button>
             <button class="bouton" id="supprimer">Supprimer une Campagne</button>
@@ -47,9 +47,14 @@
 
         <button type="button" onclick="toggleCreateCampaignForm()">Enregistrer</button>
     </form>
+    
+  <!-- Message de confirmation -->
+  <div id="confirmation-message" style="display: none; color: green;">
+    La campagne a été créée avec succès !
 </div>
 
-    <script src="../js/campaigns.js"></script>
+<script src="../js/campaigns.js"></script>
+
 
 </body>
 </html>

@@ -79,6 +79,7 @@ const campaigns = [
       "end_date": "2024-07-15",
       "budget": 4500
     }
+    
   ];
 
   exports.find = () => {

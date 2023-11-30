@@ -1,0 +1,20 @@
+#buttons-container {
+    display: flex; /* Utiliser la flexbox pour aligner horizontalement les boutons */
+    justify-content: center; /* Centrer les boutons horizontalement */
+}
+
+.bouton {
+    width: 130px; /* Réduire la largeur des boutons */
+    margin: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 13px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+#supprimer { background-color: #e74c3c; }

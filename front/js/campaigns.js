@@ -1,4 +1,3 @@
-
 // Fonction pour afficher/masquer le formulaire
 function toggleCreateCampaignForm() {
     var formSection = document.getElementById('create-campaign-form');
@@ -21,4 +20,11 @@ function saveCampaign() {
     
     // Réinitialiser les champs du formulaire
     document.getElementById('campaignForm').reset();
+}
+
+function afficherToutes() {
+    // Afficher la section pour toutes les campagnes
+    document.getElementById('voirToutesSection').style.display = 'block';
+
+    // TODO: Ajouter le code pour récupérer et afficher toutes les campagnes depuis le serveur
 }

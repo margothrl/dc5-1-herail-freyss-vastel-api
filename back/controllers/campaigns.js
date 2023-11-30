@@ -1,17 +1,10 @@
-const uuid = require('uuid/v1');
-const campaigns = require('../models/campaigns');
+const Campaign = require('../models/campaigns');
 
 exports.getAllCampaigns = (req, res, next) => {
-  campaigns.find().then(
+  Campaign.find().then(
     (campaigns) => {
       const mappedCampaigns = campaigns.map((campaigns) => {
-        id = campaigns.id;
-        name = campaigns.name;
-        description = campaigns.description
-        start_date = campaigns.start_date
-        end_date = campaigns.end_date
-        budget = campaigns.budget
-
+        console.log(campaigns);
         return campaigns;
       });
       res.status(200).json(mappedCampaigns);

@@ -55,7 +55,6 @@ let budget = document.getElementById('budget')
 //Création d'un objet dans lequel nous stockerons les valeurs présentes dans les input
 let valueId, valueName, valueDescription, valueStart, valueEnd, valueBudget
 
-//LES REGEX
 //Toutes basées sur des conditions. Tant que les informations renseignées par l'utilisateur ne correspondant pas à ce qui est demandé, la  
 
 const nameOrDescription_LengthError = 'La valeur de ce champ doit être comprise entre 2 et 25 caractères'
@@ -101,21 +100,19 @@ start.addEventListener('input', function (e) {
   }
 })
 
-//La ville
-ville.addEventListener('input', function (e) {
-  if (e.target.value.length === 0) {
-    valueVille = null
-  } else if (e.target.value.length < 2 || e.target.value.length > 50) {
-    cityErrorMsg.innerHTML = adressLengthError
-    valueVille = null
-  }
-  if (e.target.value.match(/^[a-z A-Z éèèuàaêô ,/;:-]{2,50}$/)) {
-    cityErrorMsg.innerHTML = ''
-    valueVille = e.target.value
-  }
+//Date de fin
+end.addEventListener('input', function (e) {
   if (e.target.value.match(/[0-9 +%.;]{2,45}$/)) {
-    cityErrorMsg.innerHTML = 'Une ville ne peut pas contenir de chiffre'
-    valueVille = null
+    cityErrorMsg.innerHTML = ''
+    valueStart = e.target.value
+  }
+})
+
+//Budget
+budget.addEventListener('input', function (e) {
+  if (e.target.value.match(/[0-9 +%.;]{2,45}$/)) {
+    cityErrorMsg.innerHTML = ''
+    valueStart = e.target.value
   }
 })
 

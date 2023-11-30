@@ -4,6 +4,12 @@ function toggleCreateCampaignForm() {
     var formSection = document.getElementById('create-campaign-form');
     formSection.style.display = (formSection.style.display === 'none') ? 'block' : 'none';
 }
+    // Masquer le formulaire après enregistrement
+    toggleCreateCampaignForm();
+    // Réinitialiser les champs du formulaire
+    alert("Bien Envoyé")
+    document.getElementById('campaignForm').reset();
+/*
 
 // Fonction pour sauvegarder la campagne
 function saveCampaign() {
@@ -15,10 +21,6 @@ function saveCampaign() {
     var budget = document.getElementById('budget').value;
 
     // TODO: Envoyer ces données vers le serveur ou effectuer l'écriture dans le fichier "/models/campaigns"
-    
-    // Masquer le formulaire après enregistrement
-    toggleCreateCampaignForm();
-    
-    // Réinitialiser les champs du formulaire
-    document.getElementById('campaignForm').reset();
+        
 }
+*/

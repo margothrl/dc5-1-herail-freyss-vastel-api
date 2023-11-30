@@ -29,7 +29,7 @@
         <!-- Ajout du formulaire -->
 <div id="create-campaign-form" style="display: none;">
     <h2>Créer une Campagne</h2>
-    <form id="campaignForm">
+    <form id="campaignForm" action="/api/campaigns">
         <label for="name">Nom :</label>
         <input type="text" id="name" name="name" required>
 
@@ -45,38 +45,11 @@
         <label for="budget">Budget :</label>
         <input type="number" id="budget" name="budget" required>
 
-        <button type="button" onclick="saveCampaign()">Enregistrer</button>
+        <button type="button" onclick="toggleCreateCampaignForm()">Enregistrer</button>
     </form>
 </div>
 
     <script src="../js/campaigns.js"></script>
-    <script src="js/afficherToutes.js"></script>
-    <script src="js/afficherUne.js"></script>
-    <script src="js/creer.js"></script>
-    <script src="js/supprimer.js"></script>
-
-    <script>
-        document.getElementById('voirToutes').addEventListener('click', afficherToutes);
-        document.getElementById('voirUne').addEventListener('click', afficherUne);
-        document.getElementById('creer').addEventListener('click', afficherCreer);
-        document.getElementById('supprimer').addEventListener('click', afficherSupprimer);
-
-        function afficherToutes() {
-            // Appel à la fonction dans le fichier afficherToutes.js
-        }
-
-        function afficherUne() {
-            // Appel à la fonction dans le fichier afficherUne.js
-        }
-
-        function afficherCreer() {
-            // Appel à la fonction dans le fichier creer.js
-        }
-
-        function afficherSupprimer() {
-            // Appel à la fonction dans le fichier supprimer.js
-        }
-    </script>
 
 </body>
 </html>

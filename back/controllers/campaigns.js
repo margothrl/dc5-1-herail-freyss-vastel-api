@@ -73,18 +73,4 @@ exports.ordercampaigns = (req, res, next) => {
     });
     queries.push(queryPromise);
   }
-  Promise.all(queries).then(
-    (campaigns) => {
-      const orderId = uuid();
-      return res.status(201).json({
-        contact: req.body.contact,
-        campaigns: campaigns,
-        orderId: orderId
-      })
-    }
-  ).catch(
-    (error) => {
-      return res.status(500).json(new Error(error));
-    }
-  );
 };

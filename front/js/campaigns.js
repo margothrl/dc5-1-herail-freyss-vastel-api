@@ -4,44 +4,6 @@ let fromJS = JSON.parse(window.localStorage.getItem('idJSON'))
 // Séléction de la classe dans laquelle l'HTML vas être injecté
 const addHTML = document.querySelector('#cart__items')
 
-//LA SUPPRESSION DE PRODUIT
-// Nous ciblons l'élément à supprimer grâce à la méthode element.closest
-// Nous attendons que l'HTML soit injecté 
-// Boucle forEach afin de pouvoir écouter le click sur chacun des bouttons "SUPPRIMER"
-//Nous ajoutons les produits à conserver au tableau someProduct, grace à la méthode filter
-//Enfin, nous mettons à jour le local storage;
-let someProduct = []
-const removeProduct = async (addHTML) => {
-  await addHTML
-  let deleteButtons = document.querySelectorAll('.deleteItem')
-  deleteButtons.forEach((deleteButton) => {
-    deleteButton.addEventListener('click', () => {
-      let totalToRemove = fromJS.length
-      let closestData = deleteButton.closest('article')
-      if (totalToRemove == 1) {
-        return (
-          localStorage.removeItem('idJSON'),
-          alert('Votre panier est désormais vide'),
-          (window.location.href = '../html/cart.html')
-        )
-      } else {
-        someProduct = fromJS.filter((produit) => {
-          if (
-            closestData.dataset.id != produit.selectedProduct_id ||
-            closestData.dataset.color != produit.option_produit
-          ) {
-            return true
-          }
-        })
-        localStorage.setItem('idJSON', JSON.stringify(someProduct))
-        alert('Ce produit a supprimé du panier')
-        window.location.href = '../html/cart.html'
-      }
-    })
-  })
-}
-removeProduct()
-
 /// LE FORMULAIRE
 //Nous commençons par récupérer tous les inputs 
 let id = document.getElementById('id')

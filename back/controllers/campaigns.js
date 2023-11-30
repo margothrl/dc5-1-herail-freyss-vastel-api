@@ -4,7 +4,6 @@ exports.getAllCampaigns = (req, res, next) => {
   Campaign.find().then(
     (campaigns) => {
       const mappedCampaigns = campaigns.map((campaigns) => {
-        console.log(campaigns);
         return campaigns;
       });
       res.status(200).json(mappedCampaigns);
